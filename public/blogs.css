@@ -1,0 +1,107 @@
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+section {
+  padding: 0;
+  margin: 0;
+}
+header {
+  color: white;
+  position: static;
+  width: 99vw;
+  font-family: "Overpass", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+h1 {
+  margin: 0;
+}
+#logo {
+  width: 100px;
+  height: 75px;
+}
+#logoContainer {
+  display: inline;
+}
+#navList {
+  list-style-type: none;
+}
+nav {
+  display: inline;
+}
+
+#navEle {
+  list-style: none;
+  display: inline-block;
+  padding: 10px;
+}
+#navEle :hover {
+  padding: 5px;
+  border: white;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+}
+#navElement {
+  margin: 0 0;
+  font-family: "Overpass", sans-serif;
+  font-size: 2em;
+}
+.card-img-top {
+  /* width: 300px; */
+  height: 150px;
+}
+.card-deck {
+  margin-left: 0;
+  margin-right: 0;
+  column-count: 4;
+}
+#blogHeading {
+  position: static;
+  display: block;
+  color: white;
+}
+#blogList {
+  height: 80vh;
+  width: 98vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#cardDeck {
+  display: block;
+}
+#footerContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer {
+  display: flex;
+  background-image: url(https://upload.wikimedia.org/wikipedia/en/c/c8/Very_Black_screen.jpg);
+  background-size: 99vw 100vh;
+  width: 99vw;
+  height: 10vh;
+  color: wheat;
+  align-items: center;
+  justify-content: center;
+}
+#outLogo {
+  padding: 5px;
+  width: 28px;
+  height: 28px;
+}
+#outLogo:hover {
+  border: white;
+  border-width: 1px;
+  box-shadow: 0 0 2px white;
+  border-radius: 30%;
+}

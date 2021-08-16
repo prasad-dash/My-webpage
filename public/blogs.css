@@ -135,58 +135,54 @@ footer {
 }
 .card-text {
   color: black;
+  font-size: 0.5em;
 }
 .card-title {
   color: black;
+  font-size: 1em;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 576px) {
   header {
     font-size: 0.85em;
+    position: static;
   }
   .card-deck {
-    position: relative;
-    top: 10vh;
+    position: static;
     display: flex;
     flex-direction: column;
+    height: 100%;
+    overflow: scroll;
   }
   .card {
-    height: 50%;
     position: relative;
-    top: 50%;
+    height: 50vh;
+  }
+  .card:first-of-type {
+    margin-top: 100vh;
   }
   .card-img-top {
     /* width: 300px; */
     height: 30%;
   }
   #blogHeading {
-    position: fixed;
-    top: 5vh;
-  }
-  header {
-    position: fixed;
+    position: static;
+    display: block;
   }
   #blogList {
-    height: 80vh;
+    position: static;
+    height: 100vh;
     width: 98vw;
     top: 20vh;
-    overflow: scroll;
   }
 }
-@media only screen and (max-width: 350px) {
-  header {
-    font-size: 0.5em;
-    height: 7vh;
+
+@media only screen and (max-width: 374px) {
+  .card:first-of-type {
+    margin-top: 110vh;
   }
-  .card-deck {
-    position: static;
-    display: flex;
-    flex-direction: column;
-  }
-  .card {
-    height: 90vh;
-  }
-  .card-img-top {
-    /* width: 300px; */
-    height: 10vh;
+}
+@media only screen and (max-width: 325px) {
+  .card:first-of-type {
+    margin-top: 131vh;
   }
 }

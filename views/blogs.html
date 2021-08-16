@@ -26,27 +26,22 @@
                         <a href="home">Home</a>
                     </li>
                     <li id="navEle">
-                        <a href="home#aboutMe">About Me</a>
-                    </li>
-                    <li id="navEle">
                         <a href="#">Blogs</a>
                     </li>
                     <li id="navEle">
                         <a href="projects">Projects</a>
                     </li>
-                    <li id="navEle">
-                        <a href="home#getInTouch">Get In Touch</a>
-                    </li>
                 </ul>
             </nav>
+                        <div id="blogHeading">
+                            <h1>
+                                My Blogs..
+                                <br>
+                            </h1>
+                        </div>
         </header>
         <main>
-            <div id="blogHeading">
-                <h1>
-                    My Blogs..
-                    <br>
-                </h1>
-            </div>
+
             <section id="blogList">
                 <!--  -->
  <div class="card-deck">
@@ -56,7 +51,7 @@
     <div class="card-body">
         <h5 class="card-title"><%= blog.title %> </h5>
         <p class="card-text"><%= blog._doc.headline %></p>
-        <p class="card-text"><small class="text-muted">Published on <%= blog.date %> </small></p>
+        <p class="card-text"><small class="text-muted">Published on <%= blog.date.months %> </small></p>
     </div>
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" data-whatever=<%= blog._id %> >Read More</button>   
 

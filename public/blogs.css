@@ -2,6 +2,7 @@ body {
   background-color: black;
   margin: 0;
   padding: 0;
+  color: azure;
 }
 a {
   text-decoration: none;
@@ -20,6 +21,13 @@ header {
   justify-content: space-between;
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
+}
+.btn {
+  width: 150px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 h1 {
   margin: 0;
@@ -62,12 +70,29 @@ nav {
 .card-deck {
   margin-left: 0;
   margin-right: 0;
-  column-count: 4;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: 30vh;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
 }
 #blogHeading {
   position: static;
   display: block;
   color: white;
+}
+.btn {
+  width: 100%;
+  color: black;
+  background-color: white;
+  border: solid black;
+  border-width: 2px;
+}
+.btn:hover {
+  box-shadow: black;
 }
 #blogList {
   height: 80vh;
@@ -104,4 +129,64 @@ footer {
   border-width: 1px;
   box-shadow: 0 0 2px white;
   border-radius: 30%;
+}
+.modal-content {
+  color: black;
+}
+.card-text {
+  color: black;
+}
+.card-title {
+  color: black;
+}
+@media only screen and (max-width: 600px) {
+  header {
+    font-size: 0.85em;
+  }
+  .card-deck {
+    position: relative;
+    top: 10vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .card {
+    height: 50%;
+    position: relative;
+    top: 50%;
+  }
+  .card-img-top {
+    /* width: 300px; */
+    height: 30%;
+  }
+  #blogHeading {
+    position: fixed;
+    top: 5vh;
+  }
+  header {
+    position: fixed;
+  }
+  #blogList {
+    height: 80vh;
+    width: 98vw;
+    top: 20vh;
+    overflow: scroll;
+  }
+}
+@media only screen and (max-width: 350px) {
+  header {
+    font-size: 0.5em;
+    height: 7vh;
+  }
+  .card-deck {
+    position: static;
+    display: flex;
+    flex-direction: column;
+  }
+  .card {
+    height: 90vh;
+  }
+  .card-img-top {
+    /* width: 300px; */
+    height: 10vh;
+  }
 }

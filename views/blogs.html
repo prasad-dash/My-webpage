@@ -5,10 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prasad's Blogs</title>
-    <link rel="stylesheet" href="main.css">
+    <!-- <link rel="stylesheet" href="main.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Overpass:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="blogs.css">
+    
 </head>
 <body>
         <header>
@@ -19,23 +23,56 @@
             <nav id="nav">
                 <ul id="navList">
                     <li id="navEle">
-                        <a href="index.html">Home</a>
+                        <a href="home">Home</a>
                     </li>
                     <li id="navEle">
-                        <a href="index.html#aboutMe">About Me</a>
+                        <a href="home#aboutMe">About Me</a>
                     </li>
                     <li id="navEle">
                         <a href="#">Blogs</a>
                     </li>
                     <li id="navEle">
-                        <a href="projects.htm">Projects</a>
+                        <a href="projects">Projects</a>
                     </li>
                     <li id="navEle">
-                        <a href="index.html#getInTouch">Get In Touch</a>
+                        <a href="home#getInTouch">Get In Touch</a>
                     </li>
                 </ul>
             </nav>
         </header>
+        <main>
+            <div id="blogHeading">
+                <h1>
+                    My Blogs..
+                    <br>
+                </h1>
+            </div>
+            <section id="blogList">
+                <!--  -->
+ <div class="card-deck">
+    <% for(let blog of blogList) {%> 
+    <div class="card">
+    <img src=<%= blog.displayPicture %>  class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title"><%= blog.title %> </h5>
+        <p class="card-text"><%= blog._doc.headline %></p>
+        <p class="card-text"><small class="text-muted">Published on <%= blog.date %> </small></p>
+    </div>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" data-whatever=<%= blog._id %> >Read More</button>   
+
+</div>
+<% }%>
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" id="modalHolder">
+                Loading ...
+            </div>
+        </div>
+    </div>
+</div>
+            </section>
+        </main>
         <footer>
                 <div id="footerContent">
                     <a href="https://github.com/prasad-dash" target="_blank" rel="noopener noreferrer"><img id="outLogo"
@@ -49,5 +86,15 @@
                             src="../Images/Instagram-Roud-Logo-PNG.png" width="32" height="32" alt=""></a>
                 </div>
             </footer>
+            <script src='blogs.js'></script>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
 </body>
 </html>

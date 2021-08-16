@@ -154,13 +154,20 @@ footer {
   border-radius: 30%;
 }
 #introContent {
+  display: flex;
   color: white;
   font-size: 6em;
+  width: 70vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   font-family: "Overpass", sans-serif;
   text-shadow: 0 0 7px #fff, 0 0 15px #fff, 0 0 5px #fff,
     0 0 42px rgb(1, 25, 56), 0 0 82px rgb(76, 133, 207), 0 0 92px rgb(1, 25, 56),
     0 0 102px rgb(1, 25, 56), 0 0 151px rgb(14, 119, 67), 0 0 151px #0fa;
 }
+
 input,
 button,
 textarea {
@@ -188,4 +195,84 @@ textarea {
 #msg {
   height: 30vh;
   width: 60vw;
+}
+.thankYou {
+  transition: transform 0.8s;
+  /* transform-style: preserve-3d; */
+  transform: rotateY(180deg);
+  font-size: 3em;
+  font-family: "Overpass", sans-serif;
+  text-shadow: 0 0 7px #fff, 0 0 15px #fff, 0 0 5px #fff,
+    0 0 42px rgb(1, 25, 56), 0 0 82px rgb(76, 133, 207), 0 0 92px rgb(1, 25, 56);
+  transform: rotateY(180deg);
+}
+#thankYouText {
+  transform: rotateY(180deg);
+}
+#submitButton:hover {
+  cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+  #introContent {
+    font-size: 3em;
+  }
+  header {
+    font-size: 0.85em;
+  }
+  #msg {
+    height: 20vh;
+  }
+  #aboutMeContent {
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #myImage {
+    width: 70vw;
+    height: 30vw;
+    border-radius: 30px;
+    padding: 2px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  #introContent {
+    font-size: 1em;
+  }
+  header {
+    font-size: 0.5em;
+    height: 7vh;
+  }
+  #msg {
+    height: 20vh;
+  }
+  #aboutMeContent {
+    font-size: 0.75em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  #myImage {
+    width: 70vw;
+    height: 47vw;
+    border-radius: 30px;
+    padding: 2px;
+  }
+  #getInTouch {
+    background-image: url(https://upload.wikimedia.org/wikipedia/en/c/c8/Very_Black_screen.jpg);
+    background-size: 99vw 100vh;
+    width: 99vw;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  #getInTouchContent {
+    height: 60vh;
+  }
 }

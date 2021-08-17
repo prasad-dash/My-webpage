@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   color: azure;
+  font-family: "Overpass", sans-serif;
 }
 a {
   text-decoration: none;
@@ -76,8 +77,16 @@ nav {
 .card {
   width: 30vh;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  flex-direction: column;
+
   height: 50vh;
+}
+.card-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
 }
 #blogHeading {
   position: static;
@@ -135,11 +144,15 @@ footer {
 }
 .card-text {
   color: black;
-  font-size: 0.5em;
+  font-size: 0.75em;
 }
 .card-title {
   color: black;
   font-size: 1em;
+}
+#modalBack {
+  width: 10vw;
+  margin: auto;
 }
 @media only screen and (max-width: 576px) {
   header {
@@ -174,8 +187,27 @@ footer {
     width: 98vw;
     top: 20vh;
   }
+  .card-text {
+    font-size: smaller;
+    overflow: scroll;
+  }
 }
-
+@media only screen and (max-width: 900px) and (min-width: 480px) {
+  .card {
+    height: 30vh;
+  }
+  #headline {
+    display: none;
+  }
+  .btn {
+    font-size: 0.75em;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .card:first-of-type {
+    margin-top: 80vh;
+  }
+}
 @media only screen and (max-width: 374px) {
   .card:first-of-type {
     margin-top: 110vh;

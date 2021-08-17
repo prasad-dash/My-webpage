@@ -50,8 +50,8 @@
     <img src=<%= blog.displayPicture %>  class="card-img-top" alt="...">
     <div class="card-body">
         <h5 class="card-title"><%= blog.title %> </h5>
-        <p class="card-text"><%= blog._doc.headline %></p>
-        <p class="card-text"><small class="text-muted">Published on <%= blog.date.months %> </small></p>
+        <p class="card-text" id="headline"><%= blog._doc.headline %></p>
+        <p class="card-text"><small class="text-muted">Published on <%= blog.date %> </small></p>
     </div>
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" data-whatever=<%= blog._id %> >Read More</button>   
 
@@ -60,8 +60,11 @@
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-lg">
-            <div class="modal-content" id="modalHolder">
-                Loading ...
+            <div class="modal-content" >
+                <div id="modalHolder">
+                    Loading...
+                </div>
+                <a href="/blogs" class="btn btn-primary" id="modalBack">Back</a>
             </div>
         </div>
     </div>
@@ -93,3 +96,5 @@
                 crossorigin="anonymous"></script>
 </body>
 </html>
+
+

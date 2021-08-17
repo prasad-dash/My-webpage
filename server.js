@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, '.')));
 const blogSchema= new mongoose.Schema({
     title: String,
     content: String,
-    date: Date,
+    date: String,
     displayPicture: String,
     headline: String
 });
@@ -58,7 +58,7 @@ app.get('/blogById',async (req,res)=>{
         res.send(blogEntry);
 })
 app.get('/projectById',async (req,res)=>{
-        const blogEntry=await getBlogsById(req.query.id);
+        const blogEntry=await getProjectsById(req.query.id);
         console.log(blogEntry);
         res.send(blogEntry);
 })
